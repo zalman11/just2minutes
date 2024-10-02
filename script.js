@@ -1,10 +1,10 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    const username = document.getElementById('ZTB').value;
-    const password = document.getElementById('123').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
     // Simple client-side authentication (for demonstration purposes)
-    if (username === 'user' && password === 'password') {
+    if (username === 'ZTB' && password === '123') {
         document.getElementById('uploadForm').style.display = 'block';
     } else {
         alert('Invalid credentials');
