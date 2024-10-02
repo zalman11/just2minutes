@@ -1,0 +1,17 @@
+#header {
+    background-color: #123456;
+    padding: 10px;
+}
+
+#logo {
+    background-color: aquamarine;
+}
+
+a h1 {
+    background-color: aqua;
+    padding-right: 100px;
+}
+
+footer {
+    text-align: center;
+}

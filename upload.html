@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Upload</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>    <form id="signInForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input   
+ type="password" id="password" required>
+        <br>
+        <button type="submit">Sign In</button>
+    </form>   
+
+
+    <form id="uploadForm" style="display: none;">
+        <label for="videoTitleInput">Video Title:</label>
+        <input type="text" id="videoTitleInput" required>
+        <br>
+        <label for="videoInput">Select Video:</label>
+        <input type="file" id="videoInput" accept="video/*" required>
+        <br>
+        <button type="submit">Upload Video</button>
+    </form>
+
+    <div id="uploadStatus" style="display: none;">
+        <p>Uploading video...</p>
+        <div class="progress-bar"></div>
+    </div>
+
+    <h2>Your Drafts</h2>
+    <ul id="draftsList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
