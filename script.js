@@ -5,6 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // Simple client-side authentication (for demonstration purposes)
     if (username === 'ZTB' && password === '123') {
+        localStorage.setItem('isAuthenticated', 'true');
         document.getElementById('uploadForm').style.display = 'block';
     } else {
         alert('Invalid credentials');
