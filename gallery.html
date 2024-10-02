@@ -26,8 +26,22 @@
         </div>
     </header>
     <main>
-    <ul id="videoList"></ul>
-    <script src="gallery_script.js"></script>
+<div id="gallery"></div>
+
+    <script>
+        // Fetch and display uploaded videos
+        document.addEventListener('DOMContentLoaded', function() {
+            const gallery = document.getElementById('gallery');
+            const videos = JSON.parse(localStorage.getItem('videos')) || [];
+
+            videos.forEach(video => {
+                const videoElement = document.createElement('video');
+                videoElement.src = video;
+                videoElement.controls = true;
+                gallery.appendChild(videoElement);
+            });
+        });
+    </script>
     </main>
 </body>
     <footer>

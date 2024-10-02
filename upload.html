@@ -1,38 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Video Upload</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>    <form id="signInForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input   
- type="password" id="password" required>
-        <br>
+<body>
+    <h2>Sign In</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
         <button type="submit">Sign In</button>
-    </form>   
-
-
-    <form id="uploadForm" style="display: none;">
-        <label for="videoTitleInput">Video Title:</label>
-        <input type="text" id="videoTitleInput" required>
-        <br>
-        <label for="videoInput">Select Video:</label>
-        <input type="file" id="videoInput" accept="video/*" required>
-        <br>
-        <button type="submit">Upload Video</button>
     </form>
 
-    <div id="uploadStatus" style="display: none;">
-        <p>Uploading video...</p>
-        <div class="progress-bar"></div>
-    </div>
-
-    <h2>Your Drafts</h2>
-    <ul id="draftsList"></ul>
+    <h2>Upload Video</h2>
+    <form id="uploadForm" style="display: none;">
+        <input type="file" id="videoInput" accept="video/*" required>
+        <button type="submit">Upload</button>
+    </form>
 
     <script src="script.js"></script>
 </body>
