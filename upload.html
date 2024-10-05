@@ -15,11 +15,34 @@
     </form>
 
     <h2>Upload Video</h2>
-    <form id="uploadForm" style="display: none;">
-        <input type="file" id="videoInput" accept="video/*" required>
-        <button type="submit">Upload</button>
-    </form>
 
-    <script src="script.js"></script>
+    <label for="iframeCode">Enter iframe code:</label>
+    <textarea id="iframeCode"></textarea>
+    <button onclick="addIframe()">Add Iframe</button>
+
+    <script>
+        function addIframe() {
+            const iframeCode = document.getElementById('iframeCode').value;
+
+            // Create a new XMLHttpRequest object to send the request
+            const xhr = new XMLHttpRequest();
+
+            // Set up the request
+            xhr.open('POST', 'gallery.html', true);
+            xhr.setRequestHeader('Content-Type', 'text/plain');
+
+            // Send the iframe code as the request body
+            xhr.send(iframeCode);
+
+            // Handle the response (optional)
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    console.log('Iframe code added successfully to gallery.html');
+                } else {
+                    console.error('Error adding iframe code to gallery.html');
+                }
+            };
+        }
+    </script>
 </body>
 </html>

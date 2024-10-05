@@ -26,44 +26,15 @@
         </div>
     </header>
     <main>
-    <div id="gallery"></div>
+<div id="iframeContainer"></div>
 
     <script>
-        // Fetch and display uploaded videos
-        document.addEventListener('DOMContentLoaded', function() {
-            const gallery = document.getElementById('gallery');
-            const videos = JSON.parse(localStorage.getItem('videos')) || [];
-            const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+        // Assuming you're receiving the iframe code as a POST request parameter
+        const iframeCode = new URLSearchParams(location.search).get('iframeCode');
 
-            videos.forEach((video, index) => {
-                const videoContainer = document.createElement('div');
-                videoContainer.classList.add('video-container');
-
-                const videoElement = document.createElement('video');
-                videoElement.src = video;
-                videoElement.controls = true;
-                videoElement.width = 600;
-
-                videoContainer.appendChild(videoElement);
-
-                if (isAuthenticated) {
-                    const deleteButton = document.createElement('button');
-                    deleteButton.textContent = 'Delete';
-                    deleteButton.addEventListener('click', function() {
-                        deleteVideo(index);
-                    });
-                    videoContainer.appendChild(deleteButton);
-                }
-
-                gallery.appendChild(videoContainer);
-            });
-        });
-
-        function deleteVideo(index) {
-            const videos = JSON.parse(localStorage.getItem('videos')) || [];
-            videos.splice(index, 1);
-            localStorage.setItem('videos', JSON.stringify(videos));
-            window.location.reload();
+        if (iframeCode) {
+            const iframeContainer = document.getElementById('iframeContainer');
+            iframeContainer.innerHTML = iframeCode;
         }
     </script>
     </main>

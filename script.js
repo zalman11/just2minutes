@@ -12,16 +12,16 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 });
 
-document.getElementById('uploadForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const videoInput = document.getElementById('videoInput');
-    const file = videoInput.files[0];
-    const videos = JSON.parse(localStorage.getItem('videos')) || [];
+    document.getElementById('uploadForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const videoInput = document.getElementById('videoInput');
+        const file = videoInput.files[0];
+        const videos = JSON.parse(localStorage.getItem('videos')) || [];
 
-    if (file) {
-        const videoURL = URL.createObjectURL(file);
-        videos.push(videoURL);
-        localStorage.setItem('videos', JSON.stringify(videos));
-        window.location.href = 'gallery.html';
-    }
-});
+        if (file) {
+            const videoURL = URL.createObjectURL(file);
+            videos.push(videoURL);
+            localStorage.setItem('videos', JSON.stringify(videos));
+            window.location.href = 'gallery.html';
+        }
+    });
