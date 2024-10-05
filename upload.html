@@ -16,7 +16,7 @@
 
     <h2>Upload Video</h2>
 
-    <label for="iframeCode">Enter iframe code:</label>
+        <label for="iframeCode">Enter iframe code:</label>
     <textarea id="iframeCode"></textarea>
     <button onclick="addIframe()">Add Iframe</button>
 
@@ -28,11 +28,10 @@
             const xhr = new XMLHttpRequest();
 
             // Set up the request
-            xhr.open('POST', 'gallery.html', true);
-            xhr.setRequestHeader('Content-Type', 'text/plain');
+            xhr.open('GET', `gallery.html?iframeCode=${encodeURIComponent(iframeCode)}`, true);
 
-            // Send the iframe code as the request body
-            xhr.send(iframeCode);
+            // Send the request
+            xhr.send();
 
             // Handle the response (optional)
             xhr.onload = function() {
