@@ -26,16 +26,16 @@
         </div>
     </header>
     <main>
-<div id="iframeContainer"></div>
+    <div id="iframeContainer"><iframe src="https://drive.google.com/file/d/1nP0KEzNuziRDnhYsC91iOIxeGKj2Rb77/preview" width="640" height="480" allow="autoplay"></iframe></div>
 
     <script>
-        // Assuming you're receiving the iframe code as a GET request parameter
-        const iframeCode = new URLSearchParams(location.search).get('iframeCode');
+        // Access the iframe content from the form submission
+        const iframeContent = document.querySelector('input[name="iframeContent"]').value;
 
-        if (iframeCode) {
-            const iframeContainer = document.getElementById('iframeContainer');
-            iframeContainer.innerHTML = iframeCode;
-        }
+        // Add the iframe content to the gallery
+        const iframeElement = document.createElement('iframe');
+        iframeElement.srcdoc = iframeContent;
+        document.body.appendChild(iframeElement);
     </script>
     </main>
 </body>

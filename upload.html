@@ -15,32 +15,29 @@
     </form>
 
     <h2>Upload Video</h2>
-
-        <label for="iframeCode">Enter iframe code:</label>
+<label for="iframeCode">Enter iframe code:</label>
     <textarea id="iframeCode"></textarea>
-    <button onclick="addIframe()">Add Iframe</button>
 
+    <form id="iframeForm" action="gallery.html" method="post">
+        <input type="hidden" id="iframeContent" name="iframeContent">
+    </form>
+    <button onclick="addIframe()">Add Iframe</button>
     <script>
         function addIframe() {
             const iframeCode = document.getElementById('iframeCode').value;
 
-            // Create a new XMLHttpRequest object to send the request
-            const xhr = new XMLHttpRequest();
+            // Create a new iframe element
+            const iframeElement = document.createElement('iframe');
+            iframeElement.srcdoc = iframeCode; // Set the iframe content
 
-            // Set up the request
-            xhr.open('GET', `gallery.html?iframeCode=${encodeURIComponent(iframeCode)}`, true);
+            // Add the iframe to the document body
+            document.body.appendChild(iframeElement);
 
-            // Send the request
-            xhr.send();
+            // Set the hidden input value to the iframe content
+            document.getElementById('iframeContent').value = iframeElement.outerHTML;
 
-            // Handle the response (optional)
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    console.log('Iframe code added successfully to gallery.html');
-                } else {
-                    console.error('Error adding iframe code to gallery.html');
-                }
-            };
+            // Submit the form to send the page content to gallery.html
+            document.getElementById('iframeForm').submit();
         }
     </script>
 </body>
