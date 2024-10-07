@@ -15,3 +15,8 @@ a h1 {
 footer {
     text-align: center;
 }
+
+#daly iframe {
+    size: auto;
+    padding: 10px;
+}
