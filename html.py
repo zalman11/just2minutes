@@ -68,10 +68,10 @@ if iframe_code:
     print("Iframe code added to gallery.html.")
     # Uncomment the following lines if you want to automatically push changes to GitHub:
 
-    # if git_push_changes():
-    #   print("Gallery changes pushed to GitHub.")
-    # else:
-    #   print("Failed to push gallery changes to GitHub.")
+    if git_push_changes():
+      print("Gallery changes pushed to GitHub.")
+    else:
+      print("Failed to push gallery changes to GitHub.")
 
 else:
   print("Please enter the iframe code.")
