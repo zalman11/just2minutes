@@ -50,7 +50,7 @@ def git_push_changes():
     # Push the changes
     subprocess.run(["git", "push"], check=True)
 
-    print("Successfully pushed changes to GitHub.")
+    print("Successfully pushed changes to GitHub./nhttps://zalman11.github.io/just2minutes")
 
   except subprocess.CalledProcessError as e:
     print(f"Git command failed: {e}")
