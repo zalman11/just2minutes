@@ -54,3 +54,7 @@ footer {
 #iframeContainer iframe :-ms-fullscreen {
 size: 100%;
 }
+
+h1 {
+  size: auto;
+}
