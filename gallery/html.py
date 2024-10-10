@@ -1,7 +1,10 @@
 # prompt: i need a program that takes a <iframe> using a input  and adds it to a existing gallery.html and then pushes it to GitHub that can be run locale
 
 #@title Input your iframe code
-iframe_code = f'<div class="video-container">\n<iframe src="https://drive.google.com/file/d/{input("id: ")}/preview"></iframe>\n<div class="video-title">{input("video title: ")}</div>\n</div>' #@param {type:"string"}
+iframe_code = f'''<div class="video-container">
+<iframe src="https://drive.google.com/file/d/{input("id: ")}/preview"></iframe>
+<div class="video-title">{input("video title: ")}</div>
+</div>''' #@param {type:"string"}
 
 import os
 import subprocess
