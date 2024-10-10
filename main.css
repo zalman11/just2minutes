@@ -5,6 +5,7 @@
 
 #logo {
     background-color: aquamarine;
+    border-radius: 90%;
 }
 
 a h1 {
@@ -19,4 +20,8 @@ footer {
 #daly iframe {
     size: auto;
     padding: 10px;
+}
+
+#daly iframe{
+    aspect-ratio: 1 / 0.56338;
 }
