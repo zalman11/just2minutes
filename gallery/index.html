@@ -8,18 +8,45 @@
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <title>Just2minutes</title>
     <link rel="stylesheet" href="gallery.css">
+      <style>
+    .video-container {
+      position: relative;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px; /* Adjust the height as needed */
+    }
+
+    .video-title {
+      position: absolute;
+      top: 10px; /* Adjust the top position */
+      left: 10px; /* Adjust the left position */
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
+      color: white;
+      font-size: 18px;
+      z-index: 1; /* Ensure the title is on top of the video */
+      opacity: 0; /* Initially hide the title */
+      transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+    }
+
+    .video-container:hover .video-title {
+      opacity: 1; /* Show the title on hover */
+    }
+  </style>
 </head>
 
 <body>
     <header id="header">
         <div class="row">
             <div class="col-sm-1"></div>
-            <a class="col-sm-1" href="index.html"><img src="logo .png" height=width width="100px" id="logo"
+            <a class="col-sm-1" href="../index.html"><img src="../logo .png" height=width width="100px" id="logo"
                     alt="logo"></a>
             <div class="col-sm-5"></div>
             <nav class="text-right">
                 <div>
-                    <a class="col-sm-1" href="index.html">
+                    <a class="col-sm-1" href="../index.html">
                         <h1>home</h1>
                     </a>
                     <a class="col-sm-2" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
@@ -55,7 +82,7 @@
     </main>
 </body>
 <footer>
-    <p>©gavrel godmen 2024</p>
+    <p>©Gavriel Goodman 2024</p>
 </footer>
 
 </html>

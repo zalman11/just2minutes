@@ -1,0 +1,29 @@
+/* General styles */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery-item {
+  width: 300px; /* Adjust the width as needed */
+  margin-bottom: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    width: 100%;
+  }
+}
