@@ -2,7 +2,7 @@
 
 #@title Input your iframe code
 iframe_code = f'''<div class="video-container">
-<iframe src="https://drive.google.com/file/d/{input("id: ")}/preview"></iframe>
+<iframe src="https://drive.google.com/file/d/{input("id: ")}/preview" allowfullscreen></iframe>
 <div class="video-title">{input("video title: ")}</div>
 </div>''' #@param {type:"string"}
 
