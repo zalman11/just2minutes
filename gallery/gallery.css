@@ -63,3 +63,8 @@ h1 {
 iframe title {
   visibility: visible;
 }
+
+#iframeContainer {
+  display: inline;
+  width: 100%;
+}
