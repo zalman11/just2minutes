@@ -12,7 +12,7 @@ import subprocess
 def update_gallery_html(iframe_code):
   """Updates the gallery.html file with the provided iframe code."""
 
-  gallery_html_path = "index.html"  # Path to your gallery.html file
+  gallery_html_path = "gallery\index.html"  # Path to your gallery.html file
 
   try:
     with open(gallery_html_path, "r") as f:
