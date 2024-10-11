@@ -4,40 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <title>Just2minutes</title>
-    <link rel="stylesheet" href="main.css">
     <style>
-        
-        #menu{
-min-width: auto;
+        #header {
+            background-color: #123456;
+            padding: 10px;
         }
 
-        #daly {
-            padding: 0;
+        #logo {
+            background-color: aquamarine;
+            border-radius: 100%;
         }
+
+        #menu a h1 {
+            background-color: aqua;
+            padding-right: 100px;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        #daly iframe {
+            aspect-ratio: 1 / 0.56338;
+            width: 45%;
+            padding: 10px;
+        }
+
+        #qwertyuiop {
+            #qr {
+                height: 100%;
+            }
+
+            #menu {
+                min-width: auto;
+            }
+
+            #daly {
+                padding: 0;
+            }
+
+        }
+
         .video-container {
             position: relative;
             width: 50%;
+            min-width: 520px;
             max-width: 568px;
             height: auto;
             display: inline;
+            left: 100px;
         }
 
-        #video-container iframe {
+        .video-container iframe {
+            min-width: 320px;
             width: 100%;
             height: auto;
             /* Adjust the height as needed */
         }
 
-        .video-title {
+        .video-container .video-title {
+            position: relative;
             position: absolute;
-            top: -850%;
+            top: 10px;
             /* Adjust the top position */
             left: 10px;
             /* Adjust the left position */
             padding: 5px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(83, 44, 116, 0.096);
             /* Adjust the background color and opacity */
             color: white;
             font-size: 18px;
@@ -53,45 +89,94 @@ min-width: auto;
             opacity: 1;
             /* Show the title on hover */
         }
-    </style></head>
+
+        #qr-code {
+            width: 50%;
+        }
+
+        #qr-code h3 {
+            text-align: center;
+        }
+
+        #qr-code #qr-share {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #qr-code iframe {
+            width: 80%;
+        }
+
+        #qr-code #qr-share h3 a {
+            color: rgb(63, 20, 255)
+        }
+    </style>
+</head>
 
 <body>
     <header id="header">
         <div class="row">
-            <a class="col-sm-1" href="index.html"><img src="logo .png" height=width width="100px"  id="logo" alt="logo"></a>
+            <a class="col-sm-1" href="index.html"><img src="logo .png" height=width width="100px" id="logo"
+                    alt="logo"></a>
             <div class="col-sm-1"></div>
             <div class="col-sm-5"></div>
             <nav id="menu" class="text-right">
-                <a class="col-sm-1" href="index.html"><h1>home</h1></a>
-                <a class="col-sm-2" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W"><h1>whatsapp</h1></a>
-                <a class="col-sm-1" href="./gallery/index.html"><h1>gallery</h1></a>
-            </div>
-            </nav>
+                <a class="col-sm-1" href="index.html">
+                    <h1>home</h1>
+                </a>
+                <a class="col-sm-2" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
+                    <h1>whatsapp</h1>
+                </a>
+                <a class="col-sm-1" href="./gallery/index.html">
+                    <h1>gallery</h1>
+                </a>
+        </div>
+        </nav>
         </div>
     </header>
     <main>
-    <div id="daly" class="row">
-<div class="video-container">
-<iframe src="https://drive.google.com/file/d/1bC0TYhjdYBxBQ4zZ59NOjsb02a2mIrJu/preview" allowfullscreen></iframe>
-<div class="video-title">eiruvin 5:6</div>
-</div>
-<div class="video-container">
-<iframe src="https://drive.google.com/file/d/1iVjIzNTsOGPsoqiL6C2XLEwafWyIGDTL/preview" allowfullscreen></iframe>
-<div class="video-title">eiruvin 5:5</div>
-</div>
-        
-            <iframe title="" class="col-sm-6" src="https://drive.google.com/file/d//preview"
-                width="50%" height="width/iframew*iframeh" allow="autoplay" allowfullscreen></iframe>
+        <div id="daly" class="row">
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1bC0TYhjdYBxBQ4zZ59NOjsb02a2mIrJu/preview"
+                    allowfullscreen></iframe>
+                <div class="video-title">eiruvin 5:6</div>
             </div>
-        <div id="qr code" style="size-adjust: 100%; background-color: rgb(111, 255, 200);
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1iVjIzNTsOGPsoqiL6C2XLEwafWyIGDTL/preview"
+                    allowfullscreen></iframe>
+                <div class="video-title">eiruvin 5:5</div>
+            </div>
+        </div>
+        <div id="qr-code" style="size-adjust: 100%; background-color: rgb(111, 255, 200);
     border-radius: 2.5px; align-content: center;">
-            <H3>plese share <a href="https://drive.usercontent.google.com/u/0/uc?id=1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx&export=download">dawnload</a></H3>
-<iframe src="https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview" width="640" height="480" allow="autoplay" ></iframe>        </div>
+            <div id="qr-share">
+                <H3>plese <a
+                        href="https://drive.usercontent.google.com/u/0/uc?id=1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx&export=download">dawnload</a>
+                    or <a href="#"
+                        onclick="copyToClipboard('https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview')">copy</a>
+                    and share</H3>
+                <iframe src="https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview" width="640"
+                    height="480" allow="autoplay"></iframe>
+            </div>
+
+            <script>
+                function copyToClipboard(text) {
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.value = text;
+                    document.body.appendChild(input);
+                    input.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(input);
+                    alert("Text has been copied suksesfuly!");
+                }
+            </script>
+        </div>
     </main>
 
 </body>
-    <footer>
-        <p>©gavriel Goodman 2024</p>
-    </footer>
-</html>
+<footer>
+    <p>©gavriel Goodman 2024</p>
+</footer>
 
+</html>
