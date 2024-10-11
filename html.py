@@ -1,16 +1,17 @@
 # prompt: i need a program that takes a <iframe> using a input  and adds it to a existing gallery.html and then pushes it to GitHub that can be run locale
 
 #@title Input your iframe code
-title = 'title'
-iframe_code = f'<iframe title="{input("title: ")}" src="https://drive.google.com/file/d/{input('url-id: ')}/preview" width="iframew" height="iframeh" allow="autoplay" allowfullscreen></iframe>' #@param {type:"string"}
-
+iframe_code = f'''<div class="video-container">
+<iframe src="https://drive.google.com/file/d/{input("id: ")}/preview" allowfullscreen></iframe>
+<div class="video-title">{input("video title: ")}</div>
+</div>''' #@param {type:"string"}
 import os
 import subprocess
 
 def update_gallery_html(iframe_code):
   """Updates the gallery.html file with the provided iframe code."""
 
-  gallery_html_path = "gallery.html"  # Path to your gallery.html file
+  gallery_html_path = "index.html"  # Path to your gallery.html file
 
   try:
     with open(gallery_html_path, "r") as f:

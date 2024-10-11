@@ -25,3 +25,7 @@ footer {
 #daly iframe{
     aspect-ratio: 1 / 0.56338;
 }
+
+#qr {
+    height: 100%;
+}
