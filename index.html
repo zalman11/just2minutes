@@ -8,107 +8,115 @@
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <title>Just2minutes</title>
     <style>
-        #header {
-            background-color: #123456;
-            padding: 10px;
-        }
-
-        #logo {
-            background-color: aquamarine;
-            border-radius: 100%;
-        }
-
-        #menu a h1 {
-            background-color: aqua;
-            padding-right: 100px;
-        }
-
-        footer {
-            text-align: center;
-        }
-
-        #daly iframe {
-            aspect-ratio: 1 / 0.56338;
-            width: 45%;
-            padding: 10px;
-        }
-
-        #qwertyuiop {
-            #qr {
-                height: 100%;
+        body {
+            #header {
+                background-color: #123456;
+                padding: 10px;
             }
 
-            #menu {
-                min-width: auto;
+            #logo {
+                background-color: aquamarine;
+                border-radius: 100%;
             }
 
-            #daly {
-                padding: 0;
+            #menu a h1 {
+                background-color: aqua;
+                padding-right: 100px;
             }
 
-        }
+            footer {
+                text-align: center;
+            }
 
-        .video-container {
-            position: relative;
-            width: 50%;
-            min-width: 520px;
-            max-width: 568px;
-            height: auto;
-            display: inline;
-            left: 100px;
-        }
+            #daly iframe {
+                aspect-ratio: 1 / 0.56338;
+                width: 45%;
+                padding: 10px;
+            }
 
-        .video-container iframe {
-            min-width: 320px;
-            width: 100%;
-            height: auto;
-            /* Adjust the height as needed */
-        }
+            #qwertyuiop {
+                #qr {
+                    height: 100%;
+                }
 
-        .video-container .video-title {
-            position: relative;
-            position: absolute;
-            top: 10px;
-            /* Adjust the top position */
-            left: 10px;
-            /* Adjust the left position */
-            padding: 5px;
-            background-color: rgba(83, 44, 116, 0.096);
-            /* Adjust the background color and opacity */
-            color: white;
-            font-size: 18px;
-            z-index: 1;
-            /* Ensure the title is on top of the video */
-            opacity: 0;
-            /* Initially hide the title */
-            transition: opacity 0.3s ease-in-out;
-            /* Add a smooth transition effect */
-        }
+                #menu {
+                    min-width: auto;
+                }
 
-        .video-container:hover .video-title {
-            opacity: 1;
-            /* Show the title on hover */
-        }
+                #daly {
+                    padding: 0;
+                }
 
-        #qr-code {
-            width: 50%;
-        }
+            }
 
-        #qr-code h3 {
-            text-align: center;
-        }
+            .video-container {
+                position: relative;
+                width: 50%;
+                min-width: 520px;
+                max-width: 568px;
+                height: auto;
+                display: inline;
+                left: 100px;
+            }
 
-        #qr-code #qr-share {
-            padding: 10px;
-            text-align: center;
-        }
+            .video-container iframe {
+                min-width: 320px;
+                width: 100%;
+                height: auto;
+                /* Adjust the height as needed */
+            }
 
-        #qr-code iframe {
-            width: 80%;
-        }
+            .video-container .video-title {
+                position: relative;
+                position: absolute;
+                top: auto;
+                /* Adjust the top position */
+                left: 10px;
+                /* Adjust the left position */
+                padding: 5px;
+                background-color: rgb(0, 0, 0);
+                /* Adjust the background color and opacity */
+                color: white;
+                font-size: 18px;
+                z-index: 1;
+                /* Ensure the title is on top of the video */
+                opacity: 0;
+                /* Initially hide the title */
+                transition: opacity 0.3s ease-in-out;
+                /* Add a smooth transition effect */
+            }
 
-        #qr-code #qr-share h3 a {
-            color: rgb(63, 20, 255)
+            .video-container:hover .video-title {
+                opacity: 1;
+                /* Show the title on hover */
+            }
+
+            #qr-code {
+                width: 50%;
+
+
+                h3 {
+                    text-align: center;
+                }
+
+                iframe {
+                    width: 80%;
+                }
+
+                #qr-share {
+                    padding: 10px;
+                    text-align: center;
+
+                    h3 {
+                        a {
+                            color: rgb(63, 20, 255)
+                        }
+                    }
+                }
+
+
+
+            }
         }
     </style>
 </head>
@@ -118,8 +126,8 @@
         <div class="row">
             <a class="col-sm-1" href="index.html"><img src="logo .png" height=width width="100px" id="logo"
                     alt="logo"></a>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-5"></div>
+            <div class="col-sm-1">
+            <div class="col-sm-5">
             <nav id="menu" class="text-right">
                 <a class="col-sm-1" href="index.html">
                     <h1>home</h1>
@@ -135,48 +143,54 @@
         </div>
     </header>
     <main>
-        <div id="daly" class="row">
+        <!--<div id="daly" class="row">
+<div class="video-container">
+<iframe src="https://drive.google.com/file/d/1/preview" allowfullscreen></iframe>
+<div class="video-title">1</div>
+</div>
             <div class="video-container">
+                <div class="video-title">eiruvin 5:6</div>
                 <iframe src="https://drive.google.com/file/d/1bC0TYhjdYBxBQ4zZ59NOjsb02a2mIrJu/preview"
                     allowfullscreen></iframe>
-                <div class="video-title">eiruvin 5:6</div>
             </div>
             <div class="video-container">
+                <div class="video-title">eiruvin 5:5</div>
                 <iframe src="https://drive.google.com/file/d/1iVjIzNTsOGPsoqiL6C2XLEwafWyIGDTL/preview"
                     allowfullscreen></iframe>
-                <div class="video-title">eiruvin 5:5</div>
-            </div>
         </div>
-        <div id="qr-code" style="size-adjust: 100%; background-color: rgb(111, 255, 200);
-    border-radius: 2.5px; align-content: center;">
-            <div id="qr-share">
-                <H3>plese <a
-                        href="https://drive.usercontent.google.com/u/0/uc?id=1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx&export=download">dawnload</a>
-                    or <a href="#"
-                        onclick="copyToClipboard('https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview')">copy</a>
-                    and share</H3>
-                <iframe src="https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview" width="640"
-                    height="480" allow="autoplay"></iframe>
-            </div>
+        </div>            </div>-->
+        <div id="iframeContainer"></div>
+        <script src="script.js"></script>
 
-            <script>
-                function copyToClipboard(text) {
-                    const input = document.createElement('input');
-                    input.type = 'text';
-                    input.value = text;
-                    document.body.appendChild(input);
-                    input.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(input);
-                    alert("Text has been copied suksesfuly!");
-                }
-            </script>
-        </div>
     </main>
 
 </body>
 <footer>
-    <p>©gavriel Goodman 2024</p>
+    <div id="qr-code" style="size-adjust: 100%; background-color: rgb(111, 255, 200);
+    border-radius: 2.5px; align-content: center;">
+        <div id="qr-share">
+            <H3>plese <a
+                    href="https://drive.usercontent.google.com/u/0/uc?id=1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx&export=download">dawnload</a>
+                or <a href="close.html" target="_blank"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview')">copy</a>
+                and share</H3>
+            <iframe src="https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview" width="640"
+                height="480" allow="autoplay"></iframe>
+        </div>
+
+        <script>
+            function copyToClipboard(text) {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = text;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                document.body.removeChild(input);
+                alert("Text has been copied suksesfuly!");
+            }
+        </script>
+        <p>©gavriel Goodman 2024</p>
 </footer>
 
 </html>

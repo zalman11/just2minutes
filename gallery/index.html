@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <title>Just2minutes</title>
+    <!--<link rel="stylesheet" href="styles.css">-->
     <link rel="stylesheet" href="gallery.css">
-    <style>
+    <style>/*
         #iframeContainer {
             padding: 0;
         }
@@ -17,94 +18,68 @@
             width: 50%;
             max-width: 568px;
             height: auto;
-            display: inline;
+            display: inline-block;
         }
 
         #video-container iframe {
             width: 100%;
             height: auto;
-            /* Adjust the height as needed */
-        }
+            /* Adjust the height as needed *//*
+        }*/
 
-        .video-title {
+#zadfgbnm {
+    height: 0;
+        /*.video-title {
             position: absolute;
             top: -850%;
-            /* Adjust the top position */
+            /* Adjust the top position *//*
             left: 10px;
-            /* Adjust the left position */
+            /* Adjust the left position *//*
             padding: 5px;
             background-color: rgba(0, 0, 0, 0.7);
-            /* Adjust the background color and opacity */
+            /* Adjust the background color and opacity *//*
             color: white;
             font-size: 18px;
             z-index: 1;
-            /* Ensure the title is on top of the video */
+            /* Ensure the title is on top of the video *//*
             opacity: 0;
-            /* Initially hide the title */
-            transition: opacity 0.3s ease-in-out;
-            /* Add a smooth transition effect */
-        }
+            /* Initially hide the title *//*
+            transition: opacity 0.3s ease-in-out;/*
+            /* Add a smooth transition effect *//*
+        }*/
 
-        .video-container:hover .video-title {
+        /*.video-container:hover .video-title {
             opacity: 1;
-            /* Show the title on hover */
-        }
+            /* Show the title on hover *//*
+        }*/}
     </style>
 </head>
 
 <body>
-    <header id="header">
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <a class="col-sm-1" href="../index.html"><img src="../logo .png" height=width width="100px" id="logo"
-                    alt="logo"></a>
-            <div class="col-sm-5"></div>
-            <nav class="text-right">
-                <div>
-                    <a class="col-sm-1" href="../index.html">
-                        <h1>home</h1>
-                    </a>
-                    <a class="col-sm-2" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
-                        <h1>whatsapp</h1>
-                    </a>
-                    <a class="col-sm-1" href="index.html">
-                        <h1>gallery</h1>
-                    </a>
-                </div>
-            </nav>
-        </div>
+    <header id="head" class="row">
+<script>
+    var header = document.getElementById('head');
+    //header.className('row');
+    var logoLink = document.createElement('a');
+    var logo = document.createElement('img');
+    logo.src = '../logo .png';
+    logo.height = '100';
+    logo.id = 'logo';
+    logo.alt = 'logo';
+    logoLink.appendChild(logo);
+    logoLink.className = 'col-sm-1';
+    logoLink.href = '../index.html';
+    header.appendChild(logoLink)
+
+</script>
     </header>
-    <main>
-        <div id="iframeContainer">
-<div class="video-container">
-<iframe src="https://drive.google.com/file/d/1iVjIzNTsOGPsoqiL6C2XLEwafWyIGDTL/preview" allowfullscreen></iframe>
-<div class="video-title">eiruvin 5:5</div>
-</div>
-            <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1iVjIzNTsOGPsoqiL6C2XLEwafWyIGDTL/preview" allowfullscreen></iframe>
-                <div class="video-title">eiruvin 5:6</div>
-            </div>
-            <iframe title="eiruvin 5:5" src="https://drive.google.com/file/d/1iVjIzNTsOGPsoqiL6C2XLEwafWyIGDTL/preview"
-                width="iframew" height="iframeh" allow="autoplay" allowfullscreen></iframe> <iframe title="eiruvin 5:6"
-                src="https://drive.google.com/file/d/1bC0TYhjdYBxBQ4zZ59NOjsb02a2mIrJu/preview" width="iframew"
-                height="iframeh" allow="autoplay" allowfullscreen></iframe>
-            <iframe src="https://drive.google.com/file/d/15UhU2BaY9O-H9_5GXDnJZ4ujXSuBO2Y2/preview" width="iframew"
-                height="iframeh" allow="autoplay" allowfullscreen></iframe>
-            <iframe src="https://drive.google.com/file/d/1_0aQgQrttHvh5Asm9gcIjpoh-7_4HFeF/preview" width="iframew"
-                height="iframeh" allow="autoplay" allowfullscreen></iframe>
-            <iframe src="https://drive.google.com/file/d/1w4aQ8nqR5MXBpv4FXobU9fP9EpP0ji2Q/preview" width="iframew"
-                height="iframeh" allow="autoplay" allowfullscreen></iframe>
-            <iframe src="https://drive.google.com/file/d/1M89P6vPcz5_WqP2O-gu84yjc3c6WbyY-/preview" width="iframew"
-                height="iframeh" allow="autoplay" allowfullscreen></iframe>
-            <iframe src="https://drive.google.com/file/d/1EK6oRS7koKXZ_mEer5qUab7Duo0ZaNOL/preview" width="iframew"
-                height="iframeh" allow="autoplay" allowfullscreen></iframe>
-            <iframe src="https://drive.google.com/file/d/1nNnuhveI_m7s3pkgl0JU0oU8PrMwe5NV/preview" width="iframew"
-                height="iframeh" allow="autoplay" allowfullscreen></iframe>
-        </div>
+    <main style="height: auto;">
+<div style="height: auto;" class="iframes-container" id="iframes-container"></div>
+    <script src="script.js"></script>
     </main>
-</body>
 <footer>
     <p>©Gavriel Goodman 2024</p>
 </footer>
 
+</body>
 </html>
