@@ -1,187 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Header</title>
-    <style>
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #f0f0f0;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 10px;
-        }
-
-        .logo {
-            width: 100px;
-            height: 50px;
-        }
-
-        .search-bar {
-            border: 1px solid #ccc;
-            padding: 5px;
-            border-radius: 5px;
-        }
-
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .dropdown-button {
-            position: relative;
-        }
-
-        .dropdown-button:hover .dropdown-menu {
-            display: block;
-        }
-
-        @media (max-width: 767px) {
-            nav .b {
-                display: none;
-            }
-
-            .dropdown-button {
-                display: block;
-            }
-        }
-        @media (min-width: 768px) {
-            .c {display: none;}
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="#"><img class="logo" src="your-logo.png" alt="Logo"></a>
-        </nav>
-        <nav>
-            <div class="search-bar">
-                <input id="search-input" type="text" placeholder="Search" onchange="search()">
-            </div>
-            <a class="b" href="#">Link 2</a>
-            <a class="b" href="#">Link 1</a>
-            <div class="dropdown-button">
-                <a class="c" href="#">Links</a>
-                <div class="dropdown-menu">
-                    <a class="a" href="#">Link 1</a>
-                    <a class="a" href="#">Link 2</a>
-                    <a class="a" href="#">Link 3</a>
-                </div>
-            </div>
-            <ul id="search-results"></ul>
-
-    <script>
-        /*const searchInput = document.getElementById('search-input');
-        const searchResultsContainer = document.getElementById('search-results');   
-
-        /*let dataset = [
-            { id: '123', name: 'Item 1' },
-            { id: '456', name: 'Item 2' },
-            // ... more items
-        ];
-
-        function updateDataset() {
-            // Replace this with your logic to fetch or update the dataset
-            const updatedData = [
-                { id: '789', name: 'New Item' },
-                // ... other updated items
-            ];
-            dataset = updatedData;
-            renderSearchResults();
-        }
-
-        function renderSearchResults() {
-            const searchTerm = searchInput.value;
-            const filteredResults = dataset.filter(item => item.id.includes(searchTerm));
-
-            searchResultsContainer.innerHTML = '';
-            filteredResults.forEach(item => {
-                const resultItem = document.createElement('div');
-                resultItem.textContent = item.id + ' - ' + item.name;
-                searchResultsContainer.appendChild(resultItem);
-            });
-        }
-
-        // Trigger initial rendering
-        renderSearchResults();
-
-        // Example: Update the dataset after a delay
-        setTimeout(updateDataset, 5000); // Update after 5 seconds*/
-        /*
-function serch(){
-    const sheetId = '1tw4fCUljI8WQl8mfqqvaZqc6t4ww67faBLtt2YOnzVQ';
-    const apiKey = 'AIzaSyAsyqFNrLuumdEPejAmfUWaNZ_YdDJAcKg';
-    const range = 'Sheet1!A:B';
-
-    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`)
-        .then(response => response.json())
-        .then(data => {
-            const values = data.values;
-            const container = document.getElementById('iframes-container');
-            if (!container) {
-                console.error('Container element not found');
-                return;
-            }
-
-            values.forEach((row, index) => {
-                if (index === 0) return; // Skip header row if present
-
-                const id = row[1];
-                if (searchInput === id) {
-                    window.location.href="#"+{id};
-                }
-            });
-        })
-        .catch(error => console.error('Error fetching data:', error));
-};*/
-const searchInput = document.getElementById('searchInput');
-        const itemsList = document.getElementById('items');
-
-        searchInput.addEventListener('input', () => {
-            const searchTerm = searchInput.value.toLowerCase();
-            const items = itemsList.querySelectorAll('li');
-
-            if (searchTerm.trim() === '') {
-                items.forEach(item => {
-                    item.style.display = 'none';
-                });
-            } else {
-                items.forEach(item => {
-                    if (item.textContent.toLowerCase().includes(searchTerm)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-        });
-</script>
-        </nav>
-    </header>
-<main><div style="height: auto;" class="iframes-container" id="iframes-container"></div>
-    <script src="script.js"></script></main>
-    </body>
-</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -236,6 +52,12 @@ const searchInput = document.getElementById('searchInput');
       border: 1px solid #ccc;
       padding: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+      h1 {
+        background-color: aqua;
+        border: 2px solid blue;
+      }
     }
 
     .dropdown-button {
@@ -270,10 +92,16 @@ const searchInput = document.getElementById('searchInput');
       }
     }
 
-    #iframes-container li {
-      display: inline-grid;
-      /* Initially hide all li elements within the container */
-      padding-bottom: 20px;
+    #iframes-container {
+      li {
+        display: inline-grid;
+        padding-bottom: 55px;
+        padding-top: 0px;
+
+        h1 {
+          padding: 10px;
+        }
+      }
     }
 
     main div {
@@ -288,11 +116,13 @@ const searchInput = document.getElementById('searchInput');
 
     main div li {
       aspect-ratio: 1/0.5;
-      /*width: 100%;
-        max-width: 375px;
-        min-width: 50%;
-        /*min-width: 50%;
-        max-width: 350px;*/
+      iframe {
+        aspect-ratio: 1/0.5;
+      }
+
+      img {
+        aspect-ratio: 1/0.5;
+      }
     }
 
     .c div div {
@@ -304,10 +134,7 @@ const searchInput = document.getElementById('searchInput');
     }
 
     a.b h1 {
-      /*color: #333;*/
       border: 2px solid blue;
-      /*border-width: 5px;
-        height: 40px;*/
       background-color: aqua;
       border-radius: 10px;
       margin: 1px;
@@ -318,7 +145,76 @@ const searchInput = document.getElementById('searchInput');
       background-color: #123456;
       padding: 10px;
     }
+
+    .hide-on-remove {
+      display: none;
+    }
+
+    .show-on-hover {
+      display: block;
+    }
   </style>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sheetId = '1tw4fCUljI8WQl8mfqqvaZqc6t4ww67faBLtt2YOnzVQ';
+  const apiKey = 'AIzaSyAsyqFNrLuumdEPejAmfUWaNZ_YdDJAcKg';
+  const range = 'Sheet1!A:B';
+
+  fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+      const values = data.values;
+      const container = document.getElementById('iframes-container');
+      if (!container) {
+        console.error('Container element not found');
+        return;
+      }
+
+      // Get the number of entries (excluding headers)
+      const numEntries = values.length - 1; // -1 to remove header row
+
+      // Loop through data in reverse order (bottom to top)
+      for (let index = numEntries; index >= 0; index--) {
+        const row = values[index];
+
+        // Skip header row if present
+        if (index === 0 || index === 1) continue;
+
+        const iframeSrc = row[0];
+        const iframeTitle = row[1];
+
+                const liwrapper = document.createElement('li');
+                liwrapper.id = iframeTitle;
+                const wrapper = document.createElement('div');
+                wrapper.className = 'video-container';
+                //wrapper.id = 'video-container';
+                wrapper.style.height = 'auto';
+                wrapper.style.width = '100%';
+                wrapper.style.padding = '0';
+                //wrapper.id = iframeTitle;
+
+                const title = document.createElement('h1');
+                title.textContent = iframeTitle;
+                title.style.height = '10%';
+                title.style.textAlign = 'center';
+
+                const iframe = document.createElement('iframe');
+                iframe.src = iframeSrc;
+                iframe.width = '100%';
+                iframe.minWidth = '500px';
+                iframe.height = '90%';
+                iframe.allowFullscreen = 'true';
+                iframe.allow = 'autoplay';
+
+                wrapper.appendChild(title);
+                wrapper.appendChild(iframe);
+                container.appendChild(liwrapper);
+                liwrapper.appendChild(wrapper);
+      }
+    })
+    .catch(error => console.error('Error fetching data:', error));
+});
+</script>
 </head>
 
 <body>
@@ -332,14 +228,14 @@ const searchInput = document.getElementById('searchInput');
           <input id="search-input1" type="text" placeholder="Search" onchange="search()">
         </div>
       </div>
-      <a class="b" href="../index.html">
-        <h1>home</h1>
+      <a class="b" href="../">
+        <h1>Home</h1>
       </a>
       <a class="b" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
-        <h1>whatsapp</h1>
+        <h1>WhatsApp</h1>
       </a>
-      <a class="b" href="index.html">
-        <h1>gallery</h1>
+      <a class="b" href="./">
+        <h1>Gallery</h1>
       </a>
       <div class="dropdown-button">
         <a class="c" href="#">
@@ -354,13 +250,13 @@ const searchInput = document.getElementById('searchInput');
             <input id="search-input2" type="text" placeholder="Search" onchange="search()">
           </div>
           <a class="col-sm-1" href="../">
-            <h1>home</h1>
+            <h1>Home</h1>
           </a>
           <a class="col-sm-2" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
-            <h1>whatsapp</h1>
+            <h1>WhatsApp</h1>
           </a>
           <a class="col-sm-1" href="./">
-            <h1>gallery</h1>
+            <h1>Gallery</h1>
           </a>
         </div>
       </div>
@@ -368,9 +264,10 @@ const searchInput = document.getElementById('searchInput');
     </nav>
   </header>
   <main>
+    <div id="a123" class="hide-on-remove" style="height: 275px; width: 100%; background-color: #fff;"></div>
+    <h1 style="font-size: 100px; text-align: center;">Gallery</h1>
     <div class="iframes-container" id="iframes-container">
     </div>
-    <script src="script.js"></script>
   </main>
   <script>
     const searchInput1 = document.getElementById('search-input1');
@@ -396,7 +293,6 @@ const searchInput = document.getElementById('searchInput');
       }
     });
     const searchInput2 = document.getElementById('search-input2');
-    //const itemsList = document.getElementById('iframes-container'); // Changed to target the container
 
     searchInput2.addEventListener('input', () => {
       const searchTerm2 = searchInput2.value.toLowerCase();
@@ -417,6 +313,21 @@ const searchInput = document.getElementById('searchInput');
         });
       }
     });
+  </script>
+  <script>
+    const dropdownButton = document.querySelector('.dropdown-button');
+    const elementToHide = document.getElementById('a123');
+
+    dropdownButton.addEventListener('mouseover', () => {
+      elementToHide.classList.remove('hide-on-remove');
+      elementToHide.classList.add('show-on-hover')
+    });
+
+    dropdownButton.addEventListener('mouseout', () => {
+      elementToHide.classList.remove('show-on-hover')
+      elementToHide.classList.add('hide-on-remove');
+    });
+
   </script>
   <footer style="text-align: center;">
     <p style="padding-top: 100px;">©Gavriel Goodman 2024</p>

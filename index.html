@@ -4,197 +4,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <title>Just2minutes</title>
     <style>
-        body {
-            #header {
-                background-color: #123456;
-                padding: 10px;
-            }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
 
-            #logo {
-                background-color: aquamarine;
-                border-radius: 100%;
-            }
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
-            #menu a h1 {
+        a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border-radius: 100%;
+            border: 2px solid blue;
+        }
+
+        .search-bar {
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+
+            input {
+                width: 200px;
+            }
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+            h1 {
                 background-color: aqua;
-                padding-right: 100px;
+                border: 2px solid blue;
+            }
+        }
+
+        .dropdown-button {
+            position: relative;
+        }
+
+        .dropdown-button:hover .dropdown-menu {
+            display: block;
+        }
+
+        @media (max-width: 767px) {
+            nav .b {
+                display: none;
             }
 
-            footer {
+            .dropdown-button {
+                display: block;
+            }
+
+            main div li {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .c {
+                display: none;
+            }
+
+            main div li {
+                width: 50%;
+                display: inline-block;
+            }
+        }
+
+        #iframes-container li {
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+
+        main div {
+            width: 100%;
+            height: auto;
+
+            ul {
+                width: 100%;
+                display: inline-grid;
+            }
+        }
+
+        main div li {
+            aspect-ratio: 1/0.5;
+            min-width: 50%;
+
+            iframe {
+                aspect-ratio: 1/0.5;
+            }
+        }
+
+        .c div div {
+            width: 40px;
+            height: 7.5px;
+            margin: 4px;
+            background-color: #000;
+            border-radius: 100px;
+        }
+
+        a.b h1 {
+            border: 2px solid blue;
+            background-color: aqua;
+            border-radius: 10px;
+            margin: 1px;
+            padding: 5px;
+        }
+
+        header {
+            background-color: #123456;
+            padding: 10px;
+        }
+
+        .hide-on-remove {
+            display: none;
+        }
+
+        .show-on-hover {
+            display: block;
+        }
+    </style>
+    <style>
+        footer {
+            text-align: center;
+        }
+
+        #qr-code {
+            width: 50%;
+
+
+            h3 {
                 text-align: center;
             }
 
-            #daly iframe {
-                aspect-ratio: 1 / 0.56338;
-                width: 45%;
+            iframe {
+                width: 80%;
+            }
+
+            #qr-share {
                 padding: 10px;
-            }
-
-            #qwertyuiop {
-                #qr {
-                    height: 100%;
-                }
-
-                #menu {
-                    min-width: auto;
-                }
-
-                #daly {
-                    padding: 0;
-                }
-
-            }
-
-            .video-container {
-                position: relative;
-                width: 50%;
-                min-width: 520px;
-                max-width: 568px;
-                height: auto;
-                display: inline;
-                left: 100px;
-            }
-
-            .video-container iframe {
-                min-width: 320px;
-                width: 100%;
-                height: auto;
-                /* Adjust the height as needed */
-            }
-
-            .video-container .video-title {
-                position: relative;
-                position: absolute;
-                top: auto;
-                /* Adjust the top position */
-                left: 10px;
-                /* Adjust the left position */
-                padding: 5px;
-                background-color: rgb(0, 0, 0);
-                /* Adjust the background color and opacity */
-                color: white;
-                font-size: 18px;
-                z-index: 1;
-                /* Ensure the title is on top of the video */
-                opacity: 0;
-                /* Initially hide the title */
-                transition: opacity 0.3s ease-in-out;
-                /* Add a smooth transition effect */
-            }
-
-            .video-container:hover .video-title {
-                opacity: 1;
-                /* Show the title on hover */
-            }
-
-            #qr-code {
-                width: 50%;
-
+                text-align: center;
 
                 h3 {
-                    text-align: center;
-                }
-
-                iframe {
-                    width: 80%;
-                }
-
-                #qr-share {
-                    padding: 10px;
-                    text-align: center;
-
-                    h3 {
-                        a {
-                            color: rgb(63, 20, 255)
-                        }
+                    a {
+                        color: rgb(63, 20, 255)
                     }
                 }
-
-
-
             }
+
+
+
         }
     </style>
 </head>
 
 <body>
-    <header id="header">
-        <div class="row">
-            <a class="col-sm-1" href="index.html"><img src="logo .png" height=width width="100px" id="logo"
-                    alt="logo"></a>
-            <div class="col-sm-1">
-            <div class="col-sm-5">
-            <nav id="menu" class="text-right">
-                <a class="col-sm-1" href="index.html">
-                    <h1>home</h1>
-                </a>
-                <a class="col-sm-2" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
-                    <h1>whatsapp</h1>
-                </a>
-                <a class="col-sm-1" href="./gallery/index.html">
-                    <h1>gallery</h1>
-                </a>
-        </div>
+    <header>
+        <nav>
+            <a href="#"><img class="logo" src="./logo .png" alt="Logo"></a>
         </nav>
-        </div>
+        <nav>
+            <a class="b" href="./">
+                <h1>Home</h1>
+            </a>
+            <a class="b" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
+                <h1>WhatsApp</h1>
+            </a>
+            <a class="b" href="./gallery/">
+                <h1>Gallery</h1>
+            </a>
+            <div class="dropdown-button">
+                <a class="c" href="#">
+                    <div style="height: auto; padding-left: 50%;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="col-sm-1" href="./">
+                        <h1>Home</h1>
+                    </a>
+                    <a class="col-sm-2" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
+                        <h1>WhatsApp</h1>
+                    </a>
+                    <a class="col-sm-1" href="./gallery/">
+                        <h1>Gallery</h1>
+                    </a>
+                </div>
+            </div>
+            <ul id="search-results"></ul>
+        </nav>
+
     </header>
     <main>
-        <!--<div id="daly" class="row">
-<div class="video-container">
-<iframe src="https://drive.google.com/file/d//preview" allowfullscreen></iframe>
-<div class="video-title"></div>
-</div>
-<div class="video-container">
-<iframe src="https://drive.google.com/file/d/1/preview" allowfullscreen></iframe>
-<div class="video-title">1</div>
-</div>
-            <div class="video-container">
-                <div class="video-title">eiruvin 5:6</div>
-                <iframe src="https://drive.google.com/file/d/1bC0TYhjdYBxBQ4zZ59NOjsb02a2mIrJu/preview"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <div class="video-title">eiruvin 5:5</div>
-                <iframe src="https://drive.google.com/file/d/1iVjIzNTsOGPsoqiL6C2XLEwafWyIGDTL/preview"
-                    allowfullscreen></iframe>
-        </div>
-        </div>            </div>-->
-        <div id="iframeContainer"></div>
-        <script src="script.js"></script>
+        <div id="a123" class="hide-on-remove" style="height: 275px; width: 100%; background-color: #fff;"></div>
+        <h1 style="font-size: 100px; text-align: center;">Home</h1>
 
+        <div class="iframes-container" id="iframes-container">
+            <script>
+                console.log("hi")
+            </script>
+        </div>
+        <script>document.addEventListener('DOMContentLoaded', function() {
+  const sheetId = '1tw4fCUljI8WQl8mfqqvaZqc6t4ww67faBLtt2YOnzVQ';
+  const apiKey = 'AIzaSyAsyqFNrLuumdEPejAmfUWaNZ_YdDJAcKg';
+  const range = 'Sheet1!A:B';
+
+  fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+      const values = data.values;
+      const container = document.getElementById('iframes-container');
+      if (!container) {
+        console.error('Container element not found');
+        return;
+      }
+
+      // Get the number of entries (excluding headers)
+      const numEntries = values.length - 1; // -1 to remove header row
+      let x = 1;
+
+      // Loop through data in reverse order (bottom to top)
+      for (let index = numEntries; index >= 0; index--) {
+
+        const row = values[index];
+
+        // Skip header row if present
+        if (index === 0 || index === 1) continue;
+
+        const iframeSrc = row[0];
+        const iframeTitle = row[1];
+
+                const liwrapper = document.createElement('li');
+                liwrapper.id = iframeTitle;
+                const wrapper = document.createElement('div');
+                wrapper.className = 'video-container';
+                //wrapper.id = 'video-container';
+                wrapper.style.height = 'auto';
+                wrapper.style.width = '100%';
+                wrapper.style.padding = '0';
+                //wrapper.id = iframeTitle;
+
+                const title = document.createElement('h1');
+                title.textContent = iframeTitle;
+                title.style.height = '10%';
+                title.style.textAlign = 'center';
+
+                const iframe = document.createElement('iframe');
+                iframe.src = iframeSrc;
+                iframe.width = '100%';
+                iframe.minWidth = '500px';
+                iframe.height = '90%';
+                iframe.allowFullscreen = 'true';
+                iframe.allow = 'autoplay';
+
+                wrapper.appendChild(title);
+                wrapper.appendChild(iframe);
+                container.appendChild(liwrapper);
+                liwrapper.appendChild(wrapper);
+        if (x !== 1 && x ===2) {
+            break
+        }else {
+            x = x+1;
+        }
+      }
+    })
+    .catch(error => console.error('Error fetching data:', error));
+});
+
+</script>
     </main>
+    <script>
+        const searchInput1 = document.getElementById('search-input1');
+        const itemsList = document.getElementById('iframes-container'); // Changed to target the container
 
-</body>
-<footer>
-    <div id="qr-code" style="size-adjust: 100%; background-color: rgb(111, 255, 200);
-    border-radius: 2.5px; align-content: center;">
-        <div id="qr-share">
-            <H3>plese <a
-                    href="https://drive.usercontent.google.com/u/0/uc?id=1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx&export=download">dawnload</a>
-                or <a href="close.html" target="_blank"
-                    onclick="copyToClipboard('https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview')">copy</a>
-                and share</H3>
-            <iframe src="https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview" width="640"
-                height="480" allow="autoplay"></iframe>
-        </div>
+        searchInput1.addEventListener('input', () => {
+            const searchTerm1 = searchInput1.value.toLowerCase();
+            const items = itemsList.querySelectorAll('li');
 
-        <script>
-            function copyToClipboard(text) {
-                const input = document.createElement('input');
-                input.type = 'text';
-                input.value = text;
-                document.body.appendChild(input);
-                input.select();
-                document.execCommand('copy');
-                document.body.removeChild(input);
-                alert("Text has been copied suksesfuly!");
+            if (searchTerm1.trim() === '') {
+                items.forEach(item => {
+                    item.style.display = 'inline-block';
+                });
+            } else {
+                items.forEach(item => {
+                    const title = item.querySelector('h1').textContent.toLowerCase(); // Assuming titles exist for each iframe
+                    if (title.includes(searchTerm1)) {
+                        item.style.display = 'inline-block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
             }
-        </script>
-        <p>©gavriel Goodman 2024</p>
-</footer>
+        });
+        const searchInput2 = document.getElementById('search-input2');
+
+        searchInput2.addEventListener('input', () => {
+            const searchTerm2 = searchInput2.value.toLowerCase();
+            const items = itemsList.querySelectorAll('li');
+
+            if (searchTerm2.trim() === '') {
+                items.forEach(item => {
+                    item.style.display = 'inline-block';
+                });
+            } else {
+                items.forEach(item => {
+                    const title = item.querySelector('h1').textContent.toLowerCase(); // Assuming titles exist for each iframe
+                    if (title.includes(searchTerm2)) {
+                        item.style.display = 'inline-block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        const dropdownButton = document.querySelector('.dropdown-button');
+        const elementToHide = document.getElementById('a123');
+
+        dropdownButton.addEventListener('mouseover', () => {
+            elementToHide.classList.remove('hide-on-remove');
+            elementToHide.classList.add('show-on-hover')
+        });
+
+        dropdownButton.addEventListener('mouseout', () => {
+            elementToHide.classList.remove('show-on-hover')
+            elementToHide.classList.add('hide-on-remove');
+        });
+
+    </script>
+    <footer style="padding-top: 45px;">
+        <div id="qr-code" style="width: 100%; size-adjust: 100%; background-color: rgb(111, 255, 200);
+    border-radius: 2.5px; align-content: center;">
+            <div id="qr-share">
+                <h3>Please <a
+                        href="https://drive.usercontent.google.com/u/0/uc?id=1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx&amp;export=download">download
+                    </a>or <a href="close.html" target="_blank"
+                        onclick="copyToClipboard('https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview')">copy
+                    </a>the QR code and share it.</h3><iframe
+                    src="https://drive.google.com/file/d/1IjpzW45iuKjfn5_7yvzsgYqejNKE2xXx/preview" width="100%"
+                    height="100%" allow="autoplay"></iframe>
+            </div>
+
+            <script>
+                function copyToClipboard(text) {
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.value = text;
+                    document.body.appendChild(input);
+                    input.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(input);
+                    alert("Text has been copied suksesfuly!\nThank you!");
+                }
+            </script>
+
+        </div>
+    </footer>
+    <footer style="text-align: center;">
+        <p style="padding-top: 10px;">© Gavriel Goodman 2024</p>
+    </footer>
+</body>
 
 </html>
