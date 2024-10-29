@@ -205,6 +205,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 iframe.height = '90%';
                 iframe.allowFullscreen = 'true';
                 iframe.allow = 'autoplay';
+                iframe.loading = 'lazy'; // Add the lazy loading attribute
+
 
                 wrapper.appendChild(title);
                 wrapper.appendChild(iframe);

@@ -300,51 +300,6 @@
 </script>
     </main>
     <script>
-        const searchInput1 = document.getElementById('search-input1');
-        const itemsList = document.getElementById('iframes-container'); // Changed to target the container
-
-        searchInput1.addEventListener('input', () => {
-            const searchTerm1 = searchInput1.value.toLowerCase();
-            const items = itemsList.querySelectorAll('li');
-
-            if (searchTerm1.trim() === '') {
-                items.forEach(item => {
-                    item.style.display = 'inline-block';
-                });
-            } else {
-                items.forEach(item => {
-                    const title = item.querySelector('h1').textContent.toLowerCase(); // Assuming titles exist for each iframe
-                    if (title.includes(searchTerm1)) {
-                        item.style.display = 'inline-block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-        });
-        const searchInput2 = document.getElementById('search-input2');
-
-        searchInput2.addEventListener('input', () => {
-            const searchTerm2 = searchInput2.value.toLowerCase();
-            const items = itemsList.querySelectorAll('li');
-
-            if (searchTerm2.trim() === '') {
-                items.forEach(item => {
-                    item.style.display = 'inline-block';
-                });
-            } else {
-                items.forEach(item => {
-                    const title = item.querySelector('h1').textContent.toLowerCase(); // Assuming titles exist for each iframe
-                    if (title.includes(searchTerm2)) {
-                        item.style.display = 'inline-block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-        });
-    </script>
-    <script>
         const dropdownButton = document.querySelector('.dropdown-button');
         const elementToHide = document.getElementById('a123');
 
