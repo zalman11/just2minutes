@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Header</title>
+  <title>just2minutes</title>
   <style>
     header {
       display: flex;
@@ -172,6 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Get the number of entries (excluding headers)
       const numEntries = values.length - 1; // -1 to remove header row
+      const ul = document.createElement('ul');
 
       // Loop through data in reverse order (bottom to top)
       for (let index = numEntries; index >= 0; index--) {
@@ -210,9 +211,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 wrapper.appendChild(title);
                 wrapper.appendChild(iframe);
-                container.appendChild(liwrapper);
+                ul.appendChild(liwrapper);
                 liwrapper.appendChild(wrapper);
       }
+      container.appendChild(ul);
     })
     .catch(error => console.error('Error fetching data:', error));
 });
