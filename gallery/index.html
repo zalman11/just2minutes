@@ -6,270 +6,576 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>just2minutes</title>
   <style>
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      background-color: #f0f0f0;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
-    a {
-      text-decoration: none;
-      color: #333;
-      margin: 0 10px;
-    }
-
-    .logo {
-      width: 100px;
-      height: 100px;
-      background-color: aqua;
-      border-radius: 100%;
-      border: 2px solid blue;
-    }
-
-    .search-bar {
-      border: 1px solid #ccc;
-      padding: 5px;
-      border-radius: 5px;
-
-      input {
-        width: 200px;
-      }
-    }
-
-    .dropdown-menu {
+    html {
       display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-
-      h1 {
-        background-color: aqua;
-        border: 2px solid blue;
-      }
-    }
-
-    .dropdown-button {
-      position: relative;
-    }
-
-    .dropdown-button:hover .dropdown-menu {
-      display: block;
-    }
-
-    @media (max-width: 767px) {
-      nav .b {
-        display: none;
-      }
-
-      .dropdown-button {
-        display: block;
-      }
-
-      main div li {
-        width: 100%;
-      }
     }
 
     @media (min-width: 768px) {
-      .c {
-        display: none;
-      }
+      html {
+        display: block;
 
-      main div li {
-        width: 50%;
-      }
-    }
+        body {
+          display: block;
 
-    #iframes-container {
-      li {
-        display: inline-grid;
-        padding-bottom: 55px;
-        padding-top: 0px;
+          header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #123456;
+            height: 100px;
 
-        h1 {
-          padding: 10px;
+            nav.logo {
+              display: flex;
+              align-items: center;
+              border-color: aqua;
+              height: 100%;
+
+              a.logo {
+                size: 100%;
+
+                img.logo {
+                  height: 100px;
+                  padding-top: 15%;
+                  aspect-ratio: 1/1;
+                }
+              }
+            }
+
+            nav.navigation {
+              display: flex;
+              align-items: center;
+
+              div.dropdown {
+                display: none;
+              }
+
+              div.top-search-bar {
+                padding-left: 15px;
+
+                div.search-bar {
+                  input.search-input {
+                    height: 30px;
+                    width: 200px;
+                    border: 1px solid #ccc;
+                    padding: 5px;
+                    border-radius: 5px;
+                  }
+                }
+              }
+
+              a.home-button {
+                padding-left: 7.5px;
+                padding-right: 7.5px;
+
+                h1.home {
+                  background-color: aqua;
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid blue;
+                }
+              }
+
+              a.whatsapp-button {
+                padding-left: 7.5px;
+                padding-right: 7.5px;
+
+                h1.whatsapp {
+                  background-color: aqua;
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid blue;
+                }
+              }
+
+              a.gallery-button {
+                padding-left: 7.5px;
+                padding-right: 7.5px;
+
+                h1.gallery {
+                  background-color: aqua;
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid blue;
+                }
+              }
+            }
+          }
+
+          main {
+            display: inline-block;
+            width: 100%;
+
+            .hide-on-remove {
+              display: none;
+            }
+
+            .show-on-hover {
+              display: block;
+            }
+
+            div#spacer {
+              height: 275px;
+              width: 100%;
+              background-color: #fff;
+            }
+
+            h1.title {
+              font-size: 100px;
+              text-align: center;
+              width: 100%;
+              height: 10%;
+            }
+
+            div.iframes-container {
+              width: 100%;
+              display: inline-block;
+
+              div.video-container {
+                justify-content: space-between;
+                aspect-ratio: 1.775 / 1.1;
+                display: inline-block;
+                width: 48%;
+                padding: 1%;
+                margin: 0;
+
+                iframe {
+                  aspect-ratio: 1.775 / 1;
+                }
+              }
+            }
+          }
+
+          footer {
+            text-align: center;
+
+            p.©name {
+              padding-top: 100px;
+            }
+          }
         }
       }
     }
 
-    main div {
-      width: 100%;
-      height: auto;
+    @media (max-width: 768px) {
+      html {
+        display: block;
 
-      ul {
-        width: 100%;
-        display: inline-grid;
+        body {
+          display: block;
+
+          header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #123456;
+            height: 100px;
+
+            nav.logo {
+              display: flex;
+              align-items: center;
+              border-color: aqua;
+              height: 100%;
+
+              a.logo {
+                size: 100%;
+
+                img.logo {
+                  height: 100px;
+                  padding-top: 15%;
+                  aspect-ratio: 1/1;
+                }
+              }
+            }
+
+            nav.navigation {
+              display: flex;
+              align-items: center;
+
+              div.top-search-bar {
+                display: none;
+              }
+
+              a.home-button {
+                display: none;
+              }
+
+              a.whatsapp-button {
+                display: none;
+              }
+
+              a.gallery-button {
+                display: none;
+              }
+
+              div.dropdown:hover .dropdown-menu {
+                display: block;
+              }
+
+
+
+              div.dropdown {
+                display: block;
+                padding: 20px;
+
+                a.clickable-button {
+                  display: block;
+
+                  div.button {
+                    display: block;
+                    padding-right: 10px;
+
+                    div {
+                      width: 40px;
+                      height: 7.5px;
+                      margin: 4px;
+                      background-color: #000;
+                      border-radius: 100px;
+                      position: relative;
+                    }
+                  }
+                }
+
+                div.dropdown-menu {
+                  display: none;
+                  position: absolute;
+                  top: 10%;
+                  right: 10%;
+                  background-color: #fff;
+                  border: 1px solid #ccc;
+                  padding: 10px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  text-align: center;
+
+                  div {
+                    display: block;
+                    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+                  }
+
+                  a {
+                    display: block;
+                        text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+        h1 {
+        background-color: aqua;
+        border: 2px solid blue;
+    }
+                  }
+                }
+              }
+            }
+          }
+
+          main {
+            display: inline-block;
+            width: 100%;
+
+            .hide-on-remove {
+              display: none;
+            }
+
+            .show-on-hover {
+              display: block;
+            }
+
+            div#spacer {
+              height: 147.5px;
+              width: 100%;
+              background-color: #fff;
+            }
+
+            h1.title {
+              font-size: 100px;
+              text-align: center;
+              width: 100%;
+              height: 10%;
+            }
+
+            div.iframes-container {
+              width: 100%;
+              display: inline-block;
+
+              div.video-container {
+                justify-content: space-between;
+                aspect-ratio: 1.775 / 1.1;
+                display: inline-block;
+                width: 48%;
+                padding: 1%;
+                margin: 0;
+
+                iframe {
+                  aspect-ratio: 1.775 / 1;
+                }
+              }
+            }
+          }
+
+          footer {
+            text-align: center;
+
+            p.©name {
+              padding-top: 100px;
+            }
+          }
+        }
       }
     }
 
-    main div li {
-      aspect-ratio: 1/0.5;
-      iframe {
-        aspect-ratio: 1/0.5;
+    /*@media (max-width:768px) {
+      html {
+        display: block;
+
+        body {
+          display: block;
+
+          header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+
+            nav.logo {
+              display: flex;
+              align-items: center;
+              background-color: aqua;
+              height: 100%;
+
+              a.logo {
+                height: 100%;
+
+                img.logo {
+                  height: 100%;
+                  padding-top: 15%;
+                  aspect-ratio: 1/1;
+                  background-color: aqua;
+                  border-radius: 100%;
+                  border: 2px solid blue;
+                }
+              }
+            }
+
+            nav.navagation:hover {
+              display: block;
+
+              .dropdown {
+                display: block;
+
+                .dropdown-menu {
+                  display: block;
+                }
+              }
+            }
+
+            nav.navigation {
+              display: block;
+
+              div.dropdown {
+                position: relative;
+                display: block;
+
+                a.clickable-button {
+                  position: relative;
+                  display: block;
+
+                  div.button {
+
+                    div.row1 {
+                      width: 40px;
+                      height: 7.5px;
+                      margin: 4px;
+                      background-color: #000;
+                      border-radius: 100px;
+                    }
+
+                    div.row2 {
+                      width: 40px;
+                      height: 7.5px;
+                      margin: 4px;
+                      background-color: #000;
+                      border-radius: 100px;
+                    }
+
+                    div.row3 {
+                      width: 40px;
+                      height: 7.5px;
+                      margin: 4px;
+                      background-color: #000;
+                      border-radius: 100px;
+                    }
+                  }
+                }
+
+                div.dropdown-menu {
+                  width: 200px;
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  right: 0;
+                  background-color: #fff;
+                  border: 1px solid #ccc;
+                  padding: 10px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  text-align: center;
+
+                  div.bottom-search-bar {
+                    input.search-input {}
+                  }
+
+                  a.home-button {
+                    h1.home {}
+                  }
+
+                  a.whatsapp-button {
+                    h1.whatsapp {}
+                  }
+
+                  a.gallery-button {
+                    h1.gallery {}
+                  }
+                }
+              }
+            }
+          }
+
+          main {
+            div#spacer {
+              height: 275px;
+              width: 100%;
+              background-color: #fff;
+            }
+
+            h1.title {}
+
+            div.iframes-container {}
+          }
+
+          footer {
+            text-align: center;
+
+            p.©name {
+              padding-top: 100px;
+            }
+          }
+        }
       }
-
-      img {
-        aspect-ratio: 1/0.5;
-      }
-    }
-
-    .c div div {
-      width: 40px;
-      height: 7.5px;
-      margin: 4px;
-      background-color: #000;
-      border-radius: 100px;
-    }
-
-    a.b h1 {
-      border: 2px solid blue;
-      background-color: aqua;
-      border-radius: 10px;
-      margin: 1px;
-      padding: 5px;
-    }
-
-    header {
-      background-color: #123456;
-      padding: 10px;
-    }
-
-    .hide-on-remove {
-      display: none;
-    }
-
-    .show-on-hover {
-      display: block;
-    }
+    }*/
   </style>
   <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const sheetId = '1tw4fCUljI8WQl8mfqqvaZqc6t4ww67faBLtt2YOnzVQ';
-  const apiKey = 'AIzaSyAsyqFNrLuumdEPejAmfUWaNZ_YdDJAcKg';
-  const range = 'Sheet1!A:B';
+    document.addEventListener('DOMContentLoaded', function () {
+      const sheetId = '1tw4fCUljI8WQl8mfqqvaZqc6t4ww67faBLtt2YOnzVQ';
+      const apiKey = 'AIzaSyAsyqFNrLuumdEPejAmfUWaNZ_YdDJAcKg';
+      const range = 'Sheet1!A:C';
 
-  fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`)
-    .then(response => response.json())
-    .then(data => {
-      const values = data.values;
-      const container = document.getElementById('iframes-container');
-      if (!container) {
-        console.error('Container element not found');
-        return;
-      }
+      fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`)
+        .then(response => response.json())
+        .then(data => {
+          const values = data.values;
+          const container = document.getElementById('iframes-container');
+          if (!container) {
+            console.error('Container element not found');
+            return;
+          }
 
-      // Get the number of entries (excluding headers)
-      const numEntries = values.length - 1; // -1 to remove header row
-      const ul = document.createElement('ul');
+          // Get the number of entries (excluding headers)
+          const numEntries = values.length - 1; // -1 to remove header row
+          const ul = document.createElement('ul');
 
-      // Loop through data in reverse order (bottom to top)
-      for (let index = numEntries; index >= 0; index--) {
-        const row = values[index];
+          // Loop through data in reverse order (bottom to top)
+          for (let index = numEntries; index >= 0; index--) {
+            const row = values[index];
 
-        // Skip header row if present
-        if (index === 0 || index === 1) continue;
+            // Skip header row if present
+            if (index === 0 || index === 1) continue;
 
-        const iframeSrc = row[0];
-        const iframeTitle = row[1];
+            const iframeSrc = row[0];
+            const iframeTitle = row[1];
 
-                const liwrapper = document.createElement('li');
-                liwrapper.id = iframeTitle;
-                const wrapper = document.createElement('div');
-                wrapper.className = 'video-container';
-                //wrapper.id = 'video-container';
-                wrapper.style.height = 'auto';
-                wrapper.style.width = '100%';
-                wrapper.style.padding = '0';
-                //wrapper.id = iframeTitle;
+            const wrapper = document.createElement('div');
+            wrapper.className = 'video-container';
+            //wrapper.id = 'video-container';
+            /*            wrapper.style.height = 'auto';
+                        wrapper.style.width = '100%';
+                        wrapper.style.padding = '0';
+            */            //wrapper.id = iframeTitle;
 
-                const title = document.createElement('h1');
-                title.textContent = iframeTitle;
-                title.style.height = '10%';
-                title.style.textAlign = 'center';
+            const title = document.createElement('h1');
+            title.textContent = iframeTitle;
+            title.style.height = '10%';
+            title.style.textAlign = 'center';
 
-                const iframe = document.createElement('iframe');
-                iframe.src = iframeSrc;
-                iframe.width = '100%';
-                iframe.minWidth = '500px';
-                iframe.height = '90%';
-                iframe.allowFullscreen = 'true';
-                iframe.allow = 'autoplay';
-                iframe.loading = 'lazy'; // Add the lazy loading attribute
+            const iframe = document.createElement('iframe');
+            iframe.src = iframeSrc;
+            iframe.width = '100%';
+            iframe.minWidth = '500px';
+            iframe.height = '90%';
+            iframe.allowFullscreen = 'true';
+            iframe.allow = 'autoplay';
+            iframe.loading = 'lazy'; // Add the lazy loading attribute
 
 
-                wrapper.appendChild(title);
-                wrapper.appendChild(iframe);
-                ul.appendChild(liwrapper);
-                liwrapper.appendChild(wrapper);
-      }
-      container.appendChild(ul);
-    })
-    .catch(error => console.error('Error fetching data:', error));
-});
-</script>
+            wrapper.appendChild(title);
+            wrapper.appendChild(iframe);
+            container.appendChild(wrapper);
+          }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    });
+  </script>
 </head>
 
 <body>
   <header>
-    <nav>
-      <a href="../"><img class="logo" src="../logo .png" alt="Logo"></a>
+    <nav class="logo">
+      <a class="logo" href="../">
+        <img class="logo" src="../logo .png" alt="Logo">
+      </a>
     </nav>
-    <nav>
-      <div class="b">
+    <nav class="navigation">
+      <div class="top-search-bar">
         <div class="search-bar">
-          <input id="search-input1" type="text" placeholder="Search" onchange="search()">
+          <input class="search-input" id="search-input1" type="text" placeholder="Search" onchange="search()">
         </div>
       </div>
-      <a class="b" href="../">
-        <h1>Home</h1>
+      <a class="home-button" href="../">
+        <h1 class="home">Home</h1>
       </a>
-      <a class="b" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
-        <h1>WhatsApp</h1>
+      <a class="whatsapp-button" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
+        <h1 class="whatsapp">WhatsApp</h1>
       </a>
-      <a class="b" href="./">
-        <h1>Gallery</h1>
+      <a class="gallery-button" href="./">
+        <h1 class="gallery">Gallery</h1>
       </a>
-      <div class="dropdown-button">
-        <a class="c" href="#">
-          <div style="height: auto; padding-left: 50%;">
-            <div></div>
-            <div></div>
-            <div></div>
+      <div class="dropdown">
+        <a class="clickable-button" href="#">
+          <div class="button">
+            <div class="row1"></div>
+            <div class="row2"></div>
+            <div class="row3"></div>
           </div>
         </a>
         <div class="dropdown-menu">
-          <div class="search-bar">
-            <input id="search-input2" type="text" placeholder="Search" onchange="search()">
+          <div class="bottom-search-bar">
+            <input class="search-input" id="search-input2" type="text" placeholder="Search" onchange="search()">
           </div>
-          <a class="col-sm-1" href="../">
+          <a class="home-button" href="../">
             <h1>Home</h1>
           </a>
-          <a class="col-sm-2" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
+          <a class="whatsapp-button" target="_blank" href="https://chat.whatsapp.com/JDERP6vZjZkIYN8SGXOj6W">
             <h1>WhatsApp</h1>
           </a>
-          <a class="col-sm-1" href="./">
+          <a class="gallery-button" href="./">
             <h1>Gallery</h1>
           </a>
         </div>
       </div>
-      <ul id="search-results"></ul>
     </nav>
   </header>
   <main>
-    <div id="a123" class="hide-on-remove" style="height: 275px; width: 100%; background-color: #fff;"></div>
-    <h1 style="font-size: 100px; text-align: center;">Gallery</h1>
+    <div id="spacer" class="hide-on-remove"></div>
+    <h1 class="title">Gallery</h1>
     <div class="iframes-container" id="iframes-container">
     </div>
   </main>
@@ -279,7 +585,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchInput1.addEventListener('input', () => {
       const searchTerm1 = searchInput1.value.toLowerCase();
-      const items = itemsList.querySelectorAll('li');
+      const items = itemsList.querySelectorAll('div');
 
       if (searchTerm1.trim() === '') {
         items.forEach(item => {
@@ -300,7 +606,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchInput2.addEventListener('input', () => {
       const searchTerm2 = searchInput2.value.toLowerCase();
-      const items = itemsList.querySelectorAll('li');
+      const items = itemsList.querySelectorAll('div');
 
       if (searchTerm2.trim() === '') {
         items.forEach(item => {
@@ -319,8 +625,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   </script>
   <script>
-    const dropdownButton = document.querySelector('.dropdown-button');
-    const elementToHide = document.getElementById('a123');
+    const dropdownButton = document.querySelector('.dropdown');
+    const elementToHide = document.getElementById('spacer');
 
     dropdownButton.addEventListener('mouseover', () => {
       elementToHide.classList.remove('hide-on-remove');
@@ -333,8 +639,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
   </script>
-  <footer style="text-align: center;">
-    <p style="padding-top: 100px;">©Gavriel Goodman 2024</p>
+  <footer>
+    <p class="©name">©Gavriel Goodman 2024</p>
   </footer>
 </body>
 
