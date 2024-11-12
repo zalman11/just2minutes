@@ -233,7 +233,7 @@
         <script>document.addEventListener('DOMContentLoaded', function() {
   const sheetId = '1tw4fCUljI8WQl8mfqqvaZqc6t4ww67faBLtt2YOnzVQ';
   const apiKey = 'AIzaSyAsyqFNrLuumdEPejAmfUWaNZ_YdDJAcKg';
-  const range = 'Sheet1!A:D';
+  const range = 'Sheet1!A:C';
 
   fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`)
     .then(response => response.json())
@@ -257,7 +257,7 @@
         // Skip header row if present
         if (index === 0 || index === 1) continue;
 
-        const iframeSrc = row[4];
+        const iframeSrc = row[2];
         const iframeTitle = row[1];
 
                 const liwrapper = document.createElement('li');
